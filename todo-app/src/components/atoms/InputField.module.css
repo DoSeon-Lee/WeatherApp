@@ -1,13 +1,28 @@
 .input {
-  width: 500px;
+  width: min(500px, 60vw);
   border: 1px solid #808080;
   border-radius: 4px;
   padding: 10px;
   background-color: #eee;
+  transition: all 0.3s ease;
 }
 
 .input[type="date"] {
-  width: 150px;
+  width: min(150px, 20vw);
+  transition: all 0.3s ease;
+}
+
+/* -----mobile layout------ */
+@media (max-width: 768px) {
+  .input {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .input[type="date"] {
+    width: 100%;
+    max-width: 500px;
+  }
 }
 
 .input:focus {

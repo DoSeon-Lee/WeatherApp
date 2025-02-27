@@ -11,6 +11,7 @@ const TodoInput: React.FC<TodoInputProps> = ({ addTodo }) => {
   const [inputValue, setInputValue] = useState("");
   const [dueDate, setDueDate] = useState("");
 
+  //추가되는 List 항목
   const handleAddClick = () => {
     if (inputValue.trim()) {
       addTodo(inputValue.trim(), dueDate);
@@ -19,12 +20,14 @@ const TodoInput: React.FC<TodoInputProps> = ({ addTodo }) => {
     }
   };
 
+  // Enter 키가 눌렸을 때 항목 추가 기능
   const handleKeyPress = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === "Enter") {
-      handleAddClick(); // Enter 키가 눌렸을 때 항목 추가
+      handleAddClick();
     }
   };
 
+  //InputField 구현
   return (
     <div className={styles.inputField}>
       <InputField
@@ -32,7 +35,7 @@ const TodoInput: React.FC<TodoInputProps> = ({ addTodo }) => {
         value={inputValue}
         placeholder="Add to your list..."
         onChange={(e) => setInputValue(e.target.value)}
-        onKeyPress={handleKeyPress} // Enter 키 처리 추가
+        onKeyPress={handleKeyPress}
       />
       <InputField
         type="date"
@@ -41,7 +44,9 @@ const TodoInput: React.FC<TodoInputProps> = ({ addTodo }) => {
         onChange={(e) => setDueDate(e.target.value)}
         onKeyPress={handleKeyPress}
       />
-      <Button onClick={handleAddClick} /> {/* '+' 기호가 기본으로 표시됨 */}
+      <div className={styles.addButtonWrapper}>
+        <Button onClick={handleAddClick} />
+      </div>
     </div>
   );
 };

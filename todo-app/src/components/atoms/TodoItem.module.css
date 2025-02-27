@@ -1,10 +1,13 @@
 .todoItem {
-  padding: 10px 0;
+  padding: min(10px, 1.3vw) 0;
   user-select: none;
   color: #eee;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: min(700px, 90vw);
+  margin: 0 auto;
+  transition: all 0.3s ease;
 }
 
 .checkbox {
@@ -46,13 +49,13 @@
 }
 
 .todoContent span {
-  margin-right: 8px;
+  margin-right: min(8px, 1vw);
+  transition: all 0.3s ease;
 }
 
 .dueDateTag {
-  margin-left: 10px;
   font-size: 0.8em;
-  color: #f1b116;
+  transition: all 0.3s ease;
 }
 
 .dragHandle {
@@ -80,7 +83,7 @@
   align-items: center;
 }
 
-/* Edit Button */
+/* -----Edit Button----- */
 .editButton {
   background: none;
   border: none;
@@ -112,13 +115,12 @@
   color: #eee;
 }
 
-/* complete시 style 적용 */
+/* -----complete시 style 적용----- */
 .complete .todoContent > span:not(.dragHandle) {
   text-decoration: line-through;
   color: #808080;
 }
 
-/* 완료 상태일 때 마감일 태그 스타일 */
 .complete .dueDateTag {
   opacity: 0.5;
   text-decoration: none !important;
@@ -127,4 +129,27 @@
 .complete .editButton {
   opacity: 0.5;
   cursor: not-allowed;
+}
+
+/* -----mobile layout------ */
+@media (max-width: 768px) {
+  .todoItem {
+    width: calc(100% - (min(20px, 2.5vw) * 2));
+    padding: 8px 0;
+    margin: 0 min(20px, 2.5vw);
+  }
+
+  .todoContent span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .dueDateTag {
+    font-size: 0.7em;
+  }
+
+  .todoActions button {
+    padding: 4px;
+  }
 }

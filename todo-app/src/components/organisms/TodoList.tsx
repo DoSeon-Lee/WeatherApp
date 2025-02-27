@@ -17,6 +17,7 @@ interface TodoListProps {
   reorderTodos: (startIndex: number, endIndex: number) => void;
 }
 
+// To Do List Component
 const TodoList: React.FC<TodoListProps> = ({
   todos,
   toggleComplete,

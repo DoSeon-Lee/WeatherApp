@@ -32,6 +32,7 @@ const TodoItem: React.FC<TodoItemProps> = ({
     setIsEditing(false);
   };
 
+  //Due Date 현황에 따른 color 변화
   const getDueDateColor = () => {
     if (!todo.dueDate) return "";
 
