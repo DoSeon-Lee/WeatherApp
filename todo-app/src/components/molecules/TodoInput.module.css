@@ -1,0 +1,18 @@
+.todoList {
+  width: 500px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  padding: 10px;
+  background-color: #eee;
+  outline: none;
+}
+
+.dueDateInput {
+  width: 20%;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  padding: 8px;
+  background-color: #eee;
+  margin-left: 3px;
+  color: #808080;
+}

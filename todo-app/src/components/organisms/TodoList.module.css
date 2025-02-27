@@ -1,0 +1,17 @@
+.todoList {
+  list-style: none;
+  margin-left: 20px;
+  padding: 10px;
+  text-align: left;
+  color: #eee;
+}
+
+.todoList li {
+  padding: 10px 0;
+  user-select: none;
+}
+
+.todoList li.complete {
+  text-decoration: line-through;
+  color: #808080;
+}

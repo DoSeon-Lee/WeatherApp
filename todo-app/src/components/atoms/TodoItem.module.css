@@ -1,0 +1,130 @@
+.todoItem {
+  padding: 10px 0;
+  user-select: none;
+  color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.checkbox {
+  margin-right: 10px;
+  cursor: pointer;
+  background-color: transparent;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #808080;
+  border-radius: 3px;
+  position: relative;
+  outline: none;
+}
+
+.checkbox:checked {
+  background-color: transparent;
+  border-color: #f1b116;
+}
+
+.checkbox:checked::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 1px;
+  width: 5px;
+  height: 10px;
+  border: solid #f1b116;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.todoContent {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
+.todoContent span {
+  margin-right: 8px;
+}
+
+.dueDateTag {
+  margin-left: 10px;
+  font-size: 0.8em;
+  color: #f1b116;
+}
+
+.dragHandle {
+  cursor: grab;
+  margin-right: 8px;
+  color: #808080;
+}
+
+.deleteButton {
+  background: none;
+  border: none;
+  color: #808080;
+  cursor: pointer;
+  margin-right: 8px;
+  transition: color 0.3s;
+  text-decoration: none !important;
+}
+
+.deleteButton:hover {
+  color: #eee;
+}
+
+.todoActions {
+  display: flex;
+  align-items: center;
+}
+
+/* Edit Button */
+.editButton {
+  background: none;
+  border: none;
+  color: #808080;
+  cursor: pointer;
+  margin-right: 8px;
+  transition: color 0.3s;
+}
+
+.todoItem:not(.complete) .editButton:hover {
+  color: #eee;
+}
+
+.editInput {
+  margin-right: 8px;
+  padding: 4px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  background-color: #333;
+  color: #eee;
+}
+
+.editDateInput {
+  margin-right: 8px;
+  padding: 4px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  background-color: #333;
+  color: #eee;
+}
+
+/* complete시 style 적용 */
+.complete .todoContent > span:not(.dragHandle) {
+  text-decoration: line-through;
+  color: #808080;
+}
+
+/* 완료 상태일 때 마감일 태그 스타일 */
+.complete .dueDateTag {
+  opacity: 0.5;
+  text-decoration: none !important;
+}
+
+.complete .editButton {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #242423;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+}
+
+.todoContainer {
+  width: 100%;
+  background-color: #242423;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+.deleteBtnWrap {
+  margin-top: 20px;
+}
+
+.deleteBtn {
+  cursor: pointer;
+  border: none;
+  background-color: #242423;
+  color: #808080;
+  padding: 8px;
+  transition: color 0.3s;
+}
+
+.deleteBtn:hover {
+  color: #eee;
+}
+
+h1 {
+  margin: 0;
+  margin-bottom: 12px;
+  color: #808080;
+}

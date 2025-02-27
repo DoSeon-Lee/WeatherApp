@@ -1,0 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #242423;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+}
