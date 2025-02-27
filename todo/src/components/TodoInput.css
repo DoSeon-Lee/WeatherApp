@@ -1,0 +1,64 @@
+#inputField {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+#inputField input[type="text"] {
+  width: 500px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  padding: 10px;
+  background-color: #eee;
+}
+
+#inputField input[type="text"]:focus {
+  outline: none;
+}
+
+#inputField input[type="date"] {
+  width: 20%;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  padding: 8px;
+  background-color: #eee;
+  margin-left: 3px;
+  color: #808080;
+}
+
+#inputField button {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  border: none;
+  background-color: #242423;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+#inputField button span {
+  display: block;
+  width: 2px;
+  height: 15px;
+  background-color: #808080;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  transition: background-color 0.3s;
+}
+
+#inputField button span:last-child {
+  transform: translate(-50%, -50%) rotate(-90deg);
+}
+
+#inputField button:hover span {
+  background-color: #eee;
+}
+
+#inputField button:hover span,
+#inputField button:hover span:last-child {
+  background-color: #eee;
+}
