@@ -163,4 +163,4 @@ Weather info Retching Error: [TypeError: Cannot read property 'temp' of undefine
 
 ---
 
-© 2023 Weather App. All Rights Reserved.
+© 2025 Weather App. All Rights Reserved.
